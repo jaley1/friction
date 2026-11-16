@@ -46,82 +46,82 @@ const QColor ThemeSupport::getQColor(int r,
 
 const QColor ThemeSupport::getThemeBaseColor(int alpha)
 {
-    return getQColor(26, 26, 30, alpha);
+    return getQColor(214, 218, 226, alpha);
 }
 
 SkColor ThemeSupport::getThemeBaseSkColor(int alpha)
 {
-    return SkColorSetARGB(alpha, 26, 26, 30);
+    return SkColorSetARGB(alpha, 214, 218, 226);
 }
 
 const QColor ThemeSupport::getThemeBaseDarkColor(int alpha)
 {
-    return getQColor(25, 25, 25, alpha);
+    return getQColor(198, 203, 212, alpha);
 }
 
 const QColor ThemeSupport::getThemeBaseDarkerColor(int alpha)
 {
-    return getQColor(19, 19, 21, alpha);
+    return getQColor(184, 190, 201, alpha);
 }
 
 const QColor ThemeSupport::getThemeAlternateColor(int alpha)
 {
-    return getQColor(33, 33, 39, alpha);
+    return getQColor(228, 232, 238, alpha);
 }
 
 const QColor ThemeSupport::getThemeHighlightColor(int alpha)
 {
-    return getQColor(104, 144, 206, alpha);
+    return getQColor(68, 114, 196, alpha);
 }
 
 const QColor ThemeSupport::getThemeHighlightDarkerColor(int alpha)
 {
-    return getQColor(53, 101, 176, alpha);
+    return getQColor(47, 85, 151, alpha);
 }
 
 const QColor ThemeSupport::getThemeHighlightAlternativeColor(int alpha)
 {
-    return getQColor(167, 185, 222, alpha);
+    return getQColor(143, 170, 220, alpha);
 }
 
 const QColor ThemeSupport::getThemeHighlightSelectedColor(int alpha)
 {
-    return getQColor(150, 191, 255, alpha);
+    return getQColor(115, 155, 225, alpha);
 }
 
 SkColor ThemeSupport::getThemeHighlightSkColor(int alpha)
 {
-    return SkColorSetARGB(alpha, 104, 144, 206);
+    return SkColorSetARGB(alpha, 68, 114, 196);
 }
 
 const QColor ThemeSupport::getThemeButtonBaseColor(int alpha)
 {
-    return getQColor(49, 49, 59, alpha);
+    return getQColor(196, 202, 212, alpha);
 }
 
 const QColor ThemeSupport::getThemeButtonBorderColor(int alpha)
 {
-    return getQColor(65, 65, 80, alpha);
+    return getQColor(152, 160, 174, alpha);
 }
 
 const QColor ThemeSupport::getThemeComboBaseColor(int alpha)
 {
-    return getQColor(36, 36, 53, alpha);
+    return getQColor(232, 235, 241, alpha);
 }
 
 const QColor ThemeSupport::getThemeTimelineColor(int alpha)
 {
-    return getQColor(44, 44, 49, alpha);
+    return getQColor(206, 211, 220, alpha);
 }
 
 const QColor ThemeSupport::getThemeRangeColor(int alpha)
 {
-    return getQColor(56, 73, 101, alpha);
+    return getQColor(168, 189, 224, alpha);
 }
 
 const QColor ThemeSupport::getThemeRangeSelectedColor(int alpha)
 {
-    return getQColor(87, 120, 173, alpha);
+    return getQColor(112, 148, 212, alpha);
 }
 
 const QColor ThemeSupport::getThemeFrameMarkerColor(int alpha)
@@ -141,58 +141,60 @@ const QColor ThemeSupport::getThemeColorRed(int alpha)
 
 const QColor ThemeSupport::getThemeColorBlue(int alpha)
 {
-    return getQColor(73, 142, 209, alpha);
+    return getQColor(55, 118, 189, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorYellow(int alpha)
 {
-    return getQColor(209, 183, 73, alpha);
+    return getQColor(189, 158, 42, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorPink(int alpha)
 {
-    return getQColor(169, 73, 209, alpha);
+    return getQColor(155, 62, 194, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorGreen(int alpha)
 {
-    return getQColor(73, 209, 132, alpha);
+    return getQColor(52, 168, 104, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorGreenDark(int alpha)
 {
-    return getQColor(27, 49, 39, alpha);
+    return getQColor(175, 214, 192, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorOrange(int alpha)
 {
-    return getQColor(255, 123, 0, alpha);
+    return getQColor(235, 108, 0, alpha);
 }
 
 const QColor ThemeSupport::getThemeColorTextDisabled(int alpha)
 {
-    return getQColor(112, 112, 113, alpha);
+    return getQColor(118, 124, 135, alpha);
 }
 
 const QPalette ThemeSupport::getDefaultPalette(const QColor &highlight)
 {
+    const QColor darkText(24, 26, 31);
+    const QColor disabledText(118, 124, 135);
     QPalette palette;
     palette.setColor(QPalette::Window, getThemeAlternateColor());
-    palette.setColor(QPalette::WindowText, Qt::white);
+    palette.setColor(QPalette::WindowText, darkText);
     palette.setColor(QPalette::Base, getThemeBaseColor());
     palette.setColor(QPalette::AlternateBase, getThemeAlternateColor());
-    palette.setColor(QPalette::Link, Qt::white);
-    palette.setColor(QPalette::LinkVisited, Qt::white);
-    palette.setColor(QPalette::ToolTipText, Qt::white);
-    palette.setColor(QPalette::ToolTipBase, Qt::black);
-    palette.setColor(QPalette::Text, Qt::white);
+    palette.setColor(QPalette::Link, QColor(36, 86, 175));
+    palette.setColor(QPalette::LinkVisited, QColor(92, 58, 158));
+    palette.setColor(QPalette::ToolTipText, darkText);
+    palette.setColor(QPalette::ToolTipBase, QColor(245, 247, 250));
+    palette.setColor(QPalette::Text, darkText);
     palette.setColor(QPalette::Button, getThemeBaseColor());
-    palette.setColor(QPalette::ButtonText, Qt::white);
-    palette.setColor(QPalette::BrightText, Qt::white);
+    palette.setColor(QPalette::ButtonText, darkText);
+    palette.setColor(QPalette::BrightText, Qt::black);
     palette.setColor(QPalette::Highlight, highlight.isValid() ? highlight : getThemeHighlightColor());
     palette.setColor(QPalette::HighlightedText, Qt::white);
-    palette.setColor(QPalette::Disabled, QPalette::Text, Qt::darkGray);
-    palette.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
+    palette.setColor(QPalette::Disabled, QPalette::Text, disabledText);
+    palette.setColor(QPalette::Disabled, QPalette::ButtonText, disabledText);
     return palette;
 }
 
