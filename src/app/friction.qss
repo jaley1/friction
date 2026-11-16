@@ -248,14 +248,14 @@ QDoubleSpinBox,
 QSpinBox,
 QLineEdit,
 QTextEdit#TextEdit {
-    background-color: %3;
+    background-color: %6;
 }
 
 QDoubleSpinBox:hover,
 QSpinBox:hover,
 QLineEdit:hover,
 QTextEdit#TextEdit:hover {
-    background-color: black;
+    background-color: rgb(242, 245, 250);
 }
 
 QComboBox::drop-down:button{
@@ -279,7 +279,7 @@ QWidget#menuBarWidget QPushButton {
 QToolBar#animationDockWidget,
 #darkWidget
 {
-    background-color: rgb(33, 33, 38);
+    background-color: %5;
 }
 
 QToolBar::separator {
@@ -316,29 +316,13 @@ QMenuBar {
 
 QLineEdit#OutputDestinationLineEdit {
     border: 0;
-    background-color: rgb(40, 40, 47);
+    background-color: %6;
 }
 
 QPushButton#WelcomeButton,
 QPushButton#WelcomeRecentButton {
     background-color: transparent;
 }
-
-/*QPushButton#WelcomeButton:hover {
-    border-color: #ebebeb;
-}
-
-QPushButton#WelcomeRecentButton {
-    padding: 0.25em;
-    border: none;
-    border-radius: 10%;
-    color: #ebebeb;
-    font-weight: bold;
-}
-
-QPushButton#WelcomeRecentButton:hover {
-    border: 2px solid #ebebeb;
-}*/
 
 QPushButton#FlatButton,
 QPushButton#AboutButton,
@@ -359,8 +343,8 @@ QPushButton#NoButton {
 QPushButton#DonateButton:hover,
 QPushButton#FlatButton:hover,
 QToolButton#FlatButton:hover {
-    background-color: rgb(19, 19, 21);
-    border-color: rgb(104, 144, 206);
+    background-color: %3;
+    border-color: %4;
 }
 
 QPushButton#NoButton:hover {
@@ -382,7 +366,7 @@ QToolButton#AutoPopupButton:pressed {
     background-color: transparent;
 }
 QToolButton#AutoPopupButton::menu-indicator { width: 0px; }
-QToolButton#AutoPopupButton QMenu { border: 1.5px solid rgb(74, 74, 79); }
+QToolButton#AutoPopupButton QMenu { border: 1.5px solid %2; }
 
 QSplitter::handle:horizontal {
     background-color: transparent;
@@ -708,6 +692,6 @@ QToolButton#ToolBoxGizmo[popupMode="1"]::menu-arrow {
 }
 
 QLabel#wizardHint {
-    color: lightgray;
+    color: #4A505C;
     font-size: small;
 }
